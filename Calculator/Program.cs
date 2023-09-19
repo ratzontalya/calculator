@@ -9,11 +9,11 @@ namespace Calculator
 {
     class Program
     {
-        const string shouldContinue = "y";
         static void Main(string[] args)
         {
             try
             {
+                const string shouldContinue = "y";
                 string toContinue = shouldContinue;
                 while (toContinue == shouldContinue)
                 {

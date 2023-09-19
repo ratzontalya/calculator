@@ -21,7 +21,9 @@ namespace Calculator.Classes
             int index = 0;
             List<string> convertedExercise = splittedExercise.Select(character =>
             {
-                if (character == "-" && (index == 0 || actionFactory.GetArithmeticSigns().Contains(splittedExercise[index - 1])))
+                if ((character == "-") &&
+                   ((index == 0) || (actionFactory.GetArithmeticSigns().Contains(splittedExercise[index - 1]))
+                   ))
                     character = "~";
                 index += 1;
                 return character;

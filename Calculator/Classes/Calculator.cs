@@ -20,7 +20,7 @@ namespace Calculator
             }
             return instance;
         }
-       
+
         public double Calculate(List<string> exercise, int index = 0)
         {
             double result;

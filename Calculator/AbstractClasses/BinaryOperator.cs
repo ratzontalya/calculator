@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
-    public abstract class BinaryOperator :ArithmeticMethod
+    public abstract class BinaryOperator : ArithmeticMethod
     {
         public override double CalculateOperator(List<string> exercise, int operationIndex)
         {
@@ -18,7 +18,7 @@ namespace Calculator
             localExercise.RemoveRange(operationIndex + 1, subExerciseLength);
             localExercise.Insert(operationIndex + 1, subExerciseResult.ToString());
 
-            if (localExercise.Count < 3 || !Double.TryParse(localExercise[operationIndex - 1], out double left) || !Double.TryParse(localExercise[operationIndex + 1], out double right))
+            if ((localExercise.Count < 3) || (!Double.TryParse(localExercise[operationIndex - 1], out double left)) || (!Double.TryParse(localExercise[operationIndex + 1], out double right)))
                 throw new Exception("This operator is a binary operator, you need 2 numbers for it");
             double operatorResult = Operation(left, right);
             localExercise.RemoveRange(operationIndex - 1, 3);
