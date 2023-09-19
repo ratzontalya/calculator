@@ -10,7 +10,7 @@ namespace Calculator
     {
         protected override double Operation(double[] numbers)
         {
-            return numbers[0] + numbers[1];
+            return numbers.Sum();
         }
      }
 }

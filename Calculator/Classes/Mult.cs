@@ -10,7 +10,7 @@ namespace Calculator
     {
         protected override double Operation(double[] numbers)
         {
-            return numbers[0] * numbers[1];
+            return numbers.Aggregate(1.0,(result, number) => result * number);
         }
     }
 }
