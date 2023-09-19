@@ -9,5 +9,6 @@ namespace Calculator
     public interface IActionFactory
     {
         ArithmeticSign CreateAction(string sign);
+        List<string> GetArithmeticSigns();
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Calculator.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,19 +9,22 @@ namespace Calculator
 {
     class Program
     {
+        const string shouldContinue = "y";
         static void Main(string[] args)
         {
             try
             {
-                string toContinue = "y";
-                while (toContinue == "y")
+                string toContinue = shouldContinue;
+                while (toContinue == shouldContinue)
                 {
                     Console.WriteLine("Please enter:");
                     string exercise = Console.ReadLine();
 
                     Calculator calculator = Calculator.Instance();
-                    calculator.ValidateExercise(exercise);
-                    List<string> convertedExercise = calculator.ConvertExerciseToList(exercise);
+                    Validator validator = new Validator();
+                    validator.ValidateExercise(exercise);
+                    Converter converter = new Converter();
+                    List<string> convertedExercise = converter.ConvertExerciseToList(exercise);
 
                     double result = calculator.Calculate(convertedExercise);
                     Console.WriteLine(result);

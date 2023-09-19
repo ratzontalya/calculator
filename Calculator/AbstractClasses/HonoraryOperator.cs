@@ -17,7 +17,7 @@ namespace Calculator
             exercise.RemoveRange(operationIndex + 1, subExerciseLength);
             exercise.Insert(operationIndex + 1, subExerciseResult.ToString());
 
-            if (exercise.Count < 2 || !Double.TryParse(exercise[operationIndex + 1], out double number))
+            if ((exercise.Count < 2) || (!Double.TryParse(exercise[operationIndex + 1], out double number)))
                 throw new Exception("Incorrect input ");
             double operatorResult = Operation(number);
             exercise.RemoveRange(operationIndex, 2);

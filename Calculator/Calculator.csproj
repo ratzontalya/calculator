@@ -43,13 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractClasses\Parentheses.cs" />
     <Compile Include="Classes\ActionFactory.cs" />
     <Compile Include="AbstractClasses\BinaryOperator.cs" />
-    <Compile Include="Classes\Bracket.cs" />
+    <Compile Include="Classes\RoundParentheses.cs" />
     <Compile Include="Classes\Calculator.cs" />
+    <Compile Include="Classes\Converter.cs" />
     <Compile Include="Classes\Divide.cs" />
     <Compile Include="Classes\HonoraryMinus.cs" />
     <Compile Include="AbstractClasses\HonoraryOperator.cs" />
+    <Compile Include="Classes\Validator.cs" />
     <Compile Include="Interfaces\IActionFactory.cs" />
     <Compile Include="AbstractClasses\ArithmeticMethod.cs" />
     <Compile Include="AbstractClasses\ArithmeticSign.cs" />
