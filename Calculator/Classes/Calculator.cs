@@ -9,16 +9,9 @@ namespace Calculator
 {
     public class Calculator
     {
-        private static Calculator instance;
-        public IActionFactory actionFactory = new ActionFactory();
-        protected Calculator() { }
-        public static Calculator Instance()
-        {
-            if (instance == null)
-            {
-                instance = new Calculator();
-            }
-            return instance;
+        public IActionFactory actionFactory;
+        public Calculator() {
+            actionFactory = new ActionFactory();
         }
 
         public double Calculate(List<string> exercise, int index = 0)

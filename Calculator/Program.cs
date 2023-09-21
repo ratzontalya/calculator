@@ -20,7 +20,7 @@ namespace Calculator
                     Console.WriteLine("Please enter:");
                     string exercise = Console.ReadLine();
 
-                    Calculator calculator = Calculator.Instance();
+                    Calculator calculator = new Calculator();
                     Validator validator = new Validator();
                     validator.ValidateExercise(exercise);
                     Converter converter = new Converter();

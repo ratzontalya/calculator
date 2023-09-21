@@ -8,7 +8,7 @@ namespace Calculator
 {
     public abstract class ArithmeticSign
     {
-        protected Calculator calculator = Calculator.Instance();
+        protected Calculator calculator = new Calculator();
         public abstract double CalculateOperator(List<string> exercise, int index);
     }
 }
